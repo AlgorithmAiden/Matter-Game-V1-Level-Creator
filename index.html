@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+        }
+
+        select,
+        button,
+        input {
+            background-color: #ccc;
+        }
+
+        #canvasShell {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="input">
+        <label for="brushPicker">Brush Type</label>
+        <select id="brushPicker">
+            <option value=1>Solid</option>
+            <option value=2>Spawn</option>
+            <option value=3>End</option>
+            <option value=4>Death</option>
+        </select>
+        <label for="gridWidth">Grid Width: </label>
+        <input type="text" id="gridWidth" value="25">
+        <label for="gridHeight">Grid Height: </label>
+        <input type="text" id="gridHeight" value="25">
+        <button id="update">Update</button>
+        <button id="copy">Copy map to clipboard</button>
+        <button id="copyRaw">Copy raw map to clipboard</button>
+    </div>
+    <div id="canvasShell">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
